@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        
+        .box {
+            width: 500px;
+            height: 300px;
+            background-color: blanchedalmond;
+            margin: 20px auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        
+        .top {
+            width: 100px;
+            height: 80px;
+            margin: 0 10px;
+            text-align: center;
+            background-color: #000;
+            color: #fff;
+        }
+        
+        .foot {
+            width: 500px;
+            background-color: coral;
+            margin: 0 auto;
+        }
+        
+        h3 {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="top">
+            <h1>1</h1>
+            <h1>JAN</h1>
+        </div>
+        <div class="top">
+            <h1>2</h1>
+            <h1>FER</h1>
+        </div>
+        <div class="top">
+            <h1>3</h1>
+            <h1>MAR</h1>
+        </div>
+        <div class="top">
+            <h1>4</h1>
+            <h1>APR</h1>
+        </div>
+        <div class="top">
+            <h1>5</h1>
+            <h1>MAY</h1>
+        </div>
+        <div class="top">
+            <h1>6</h1>
+            <h1>JUN</h1>
+        </div>
+        <div class="top">
+            <h1>7</h1>
+            <h1>JUL</h1>
+        </div>
+        <div class="top">
+            <h1>8</h1>
+            <h1>AUG</h1>
+        </div>
+        <div class="top">
+            <h1>9</h1>
+            <h1>SEP</h1>
+        </div>
+        <div class="top">
+            <h1>10</h1>
+            <h1>OCT</h1>
+        </div>
+        <div class="top">
+            <h1>11</h1>
+            <h1>NOV</h1>
+        </div>
+        <div class="top">
+            <h1>12</h1>
+            <h1>DEC</h1>
+        </div>
+    </div>
+    <div class="foot">
+        <h3 style="display: block;">1月节日元旦:1月1日至3日放假三天</h3>
+        <h3>2月节日2月2日至8日放假7天</h3>
+        <h3>3月节日妇女节:3月8月妇女节,与我无关</h3>
+        <h3>4月节日清明节：4月3日至5日放假3天</h3>
+        <h3>5月节日劳动节：4月30日至5月2日放假3天。</h3>
+        <h3>6月节日端午节：6月4日至6日放假3天。</h3>
+        <h3>7月节日小暑：7月7日小暑。不放假。</h3>
+        <h3>8月节日七夕节：8月6日七夕节。不放假。</h3>
+        <h3>9月节日中秋节：9月10日至12日放假3天。</h3>
+        <h3>10月节日国庆节：10月1日至7日放假7天。</h3>
+        <h3>11月节日立冬：11月8日立冬。不放假</h3>
+        <h3>12月节日艾滋病日:12月1日废除奴隶制国际日:12月2日。</h3>
+    </div>
+</body>
+
+</html>
+<script>
+    var title = document.querySelectorAll(".top")
+    var content = document.querySelectorAll("h3")
+    for (let i = 0; i < title.length; i++) {
+        title[i].onmouseover = function() {
+            for (var j = 0; j < title.length; j++) {
+                title[j].style.backgroundColor = "black"
+                title[j].style.color = "#fff"
+                content[j].style.display = "none"
+            }
+            this.style.backgroundColor = "#fff"
+            this.style.color = "black"
+            content[i].style.display = "block"
+        }
+    }
+</script>

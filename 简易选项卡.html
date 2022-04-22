@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        
+        .box {
+            width: 400px;
+            height: 300px;
+            border: 1px solid #000;
+        }
+        
+        .top {
+            width: 400px;
+            height: 30px;
+            display: flex;
+        }
+        
+        .top p {
+            flex: 1;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            background-color: black;
+            color: #fff;
+        }
+        
+        ul {
+            margin: 20px;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="top">
+            <p>第一节课</p>
+            <p>第二节课</p>
+            <p>第三节课</p>
+        </div>
+        <ul style="display: block;">
+            <li>网页特效原理分析11111</li>
+            <li>网页特效原理分析</li>
+            <li>网页特效原理分析</li>
+            <li>网页特效原理分析</li>
+            <li>网页特效原理分析</li>
+            <li>网页特效原理分析</li>
+        </ul>
+        <ul>
+            <li>网页特效原理分析2222222222</li>
+            <li>网页特效原理分析</li>
+            <li>网页特效原理分析</li>
+            <li>网页特效原理分析</li>
+            <li>网页特效原理分析</li>
+            <li>网页特效原理分析</li>
+        </ul>
+        <ul>
+            <li>网页特效原理分析3333</li>
+            <li>网页特效原理分析</li>
+            <li>网页特效原理分析</li>
+            <li>网页特效原理分析</li>
+            <li>网页特效原理分析</li>
+            <li>网页特效原理分析</li>
+        </ul>
+    </div>
+</body>
+
+</html>
+<script>
+    var title = document.querySelectorAll("p")
+    var uls = document.querySelectorAll("ul")
+    for (let i = 0; i < title.length; i++) {
+        title[i].onmouseover = function() {
+            for (var j = 0; j < title.length; j++) {
+                title[j].style.backgroundColor = "black"
+                title[j].style.color = "#fff"
+                uls[j].style.display = "none"
+            }
+            this.style.backgroundColor = "#fff"
+            this.style.color = "black"
+            uls[i].style.display = "block"
+        }
+    }
+</script>
